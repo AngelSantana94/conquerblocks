@@ -1,0 +1,21 @@
+@use '../abstracts/' as *;
+
+.contact{
+
+    &__title{
+        min-width: 100%;
+        color: black;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 28px;
+        letter-spacing: -1.14px;
+    }
+
+    &__text{
+        font-size: 18px;
+    }
+
+    &__link{
+        color: red;
+    }
+}

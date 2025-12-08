@@ -1,0 +1,156 @@
+@use '../../abstracts/' as *;
+
+.master__methodology {
+    position: relative;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 300px;
+
+    &-content {
+      
+      text-align: center;
+      position: relative; // Necesario para posicionar la imagen absoluta
+
+      @include breakpoint(md) {
+        
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-bottom: -215px;
+      }
+      
+    }
+  
+    &-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+  
+    &-subtitle {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 2rem;
+    }
+  
+    &-bar {
+      width: 60px;
+      height: 5px;
+      margin: 0 auto 2rem auto;
+      display: block;
+    }
+
+    &-cards {
+      
+
+      @include breakpoint(md) {
+        flex-wrap: wrap;
+        display: flex;
+        width: 100%;
+        gap: 2rem;
+        margin-bottom: 0;
+      }
+    }
+  
+    &-card {
+      background-color: #fff;
+      padding: 2rem;
+      margin-top: 2rem;
+
+      @include breakpoint(md) {
+        width: 450px;
+        background-color: red($color: #000000);
+      }
+      
+
+      &-boxicon{
+        align-items: center;
+        border-radius: 100%;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.10);
+        margin: 0 auto;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+
+      }
+  
+      &-icon {
+        
+        width: 40px;
+        height: 40px;
+        
+      }
+  
+      &-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+  
+      &-highlight {
+        font-size: 0.95rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+  
+      &-description {
+        font-size: 1rem;
+        color: #333;
+      }
+
+      &-description-links{
+        color: black;
+      }
+
+      &-description-links-line{
+        color: black;
+        text-decoration: underline;
+      }
+    }
+
+    /* 🔹 Imagen absoluta al final */
+    &-image {
+      position: absolute;
+      bottom: 100;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      z-index: -1;
+
+      @include breakpoint(md) {
+        position: absolute;
+        top: 60%;
+        left: 81.5%;
+        transform: translateX(-50%);
+        width: 100%;
+        z-index: -1;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      padding: 2rem 1rem;
+  
+      &-card {
+        padding: 1.5rem;
+      }
+
+      &-image {
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      &-image {
+        max-width: 600px;
+        bottom: -50px;
+      }
+    }
+}

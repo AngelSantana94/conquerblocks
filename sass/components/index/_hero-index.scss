@@ -1,0 +1,61 @@
+@use "../../abstracts/" as *;
+.hero-video {
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+    }
+    
+    &__overlay {
+        position: relative;
+        top: -70px;
+        z-index: 2;
+        color: #fff;
+        text-align: center;
+        margin: 0 1rem;
+        font-family: Arial, sans-serif;
+    }
+    
+    &__title {
+        font-family: 'Poppins';
+        display: inline;
+        padding: 5px 10px 5px 10px;
+        background-color: rgba(0, 0, 0, 0.6      );
+        font-size: 12px;
+        font-style: italic;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    
+    &__subtitle {
+        font-family: 'Poppins';
+        margin-top: 1.5rem;
+        font-size: 22px;
+        margin-bottom: 2rem;
+        font-weight: 900;
+        font-style: italic;
+        text-transform: uppercase;
+        span {
+            font-weight: 900;
+            color: $light-blue;
+        }
+    }
+
+    &__description {
+        font-family: 'Poppins';
+        font-size: 16px;
+    }
+}

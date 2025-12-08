@@ -1,0 +1,58 @@
+@use '../../abstracts/' as *;
+
+
+    .team{
+        @media (min-width: 768px) {
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        
+        &__title{
+            color: black;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 28px;
+            letter-spacing: -1.14px;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+        &__subtitle{
+            color:#a09393 ;
+
+        }
+
+        &__grid{
+            color: black;
+
+            @media (min-width: 768px) {
+                display: flex;
+                flex-direction: row;
+                gap: 25px;
+                
+              }
+            .team-member{
+
+                @media (min-width: 768px) {
+                    width: 400px;
+                  }
+                &__image{
+                    border-radius: 50%;
+                }
+
+                &__name{
+                    color: black;
+                    font-weight: 700;
+                    font-size: 25px;
+                    line-height: 28px;
+                    letter-spacing: -1.14px;
+                    margin-bottom: 0;
+                }
+
+                &__bio{
+                    font-size: 18px;
+                    margin-bottom: 70px;
+                }
+            }
+        }
+    }

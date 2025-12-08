@@ -1,0 +1,110 @@
+@use '../../abstracts/' as *;
+
+.master__benefits {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 15px;
+    overflow: hidden;
+
+    &-title{
+        
+        margin: 15px 20px;
+    }
+    
+
+    &-green-bar{
+        text-align: center;
+        width: 60px;
+        height: 5px;
+        margin-bottom: 50px;
+        z-index: 99;
+    }
+
+    &-title {
+        z-index: 99;
+        font-size: 20px;
+        font-weight: 800;
+        text-align: center;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        word-spacing: -2px;
+        
+    }
+
+    &-content {
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2rem;
+        z-index: 99;
+        position: relative;
+    }
+
+    &-bg {
+        background-image: url("/img/cursos/background-punto-verde.avif");
+        background-size: 100%;
+        background-position-x: -20px;
+        background-position-y: 150px;
+        position: absolute;
+        top: 200px;
+        right: 120px;
+        width: 45%;
+        height: 20%;
+    }
+}
+
+// Los items y sus elementos hijos deben estar anidados bajo -list
+.master__benefits-list {
+    .master__benefit-item {  // Nota el cambio de guión aquí (benefit no benefits)
+        position: relative;
+        background-color: white;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        transition: transform 0.3s ease;
+    
+        &:hover {
+            transform: translateY(-5px);
+        }
+    
+        .master__benefit-icon {
+            width: 120px;
+            height: 130px;
+
+        }
+    
+        .master__benefit-heading {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+    
+        .master__benefit-subheading {
+            font-size: 16px;
+            color: #777;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+    
+        .master__benefit-description {
+            font-size: 16px;
+            color: #333;
+            text-align: left;
+        }
+    }
+}
+

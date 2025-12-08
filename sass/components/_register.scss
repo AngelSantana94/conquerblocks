@@ -1,0 +1,32 @@
+@use '../abstracts/' as *;
+
+.register{
+    &__title{
+        min-width: 100%;
+        color: black;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 28px;
+        letter-spacing: -1.14px;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+    ///&__form-group{}
+
+    ///&__label{}
+    &__input{
+        padding-left: 10px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: black;
+    }
+}

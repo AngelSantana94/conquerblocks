@@ -1,0 +1,54 @@
+@use '/sass/abstracts/' as *;
+
+.terms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f6f7; // gris suave de fondo
+    padding-bottom: 3rem;
+  
+    &__banner {
+      width: 100%;
+      height: 120px;
+      overflow: hidden;
+      color: #fff;
+      background-color: #1d1d1d;
+      background-image: radial-gradient(circle at 0%, #ff010126, #0000 47%), radial-gradient(circle at 40% 130%, #7aa7ff69, #0000 58%);
+      padding-top: 140px;
+    }
+  
+    &__content {
+      background-color: #fff;
+      max-width: 800px;
+      padding: 2rem;
+      margin-top: -40px; // hace que se superponga un poco al banner
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+  
+    &__title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+  
+    &__update {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+  
+    &__section {
+      margin-bottom: 1.5rem;
+  
+      h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+  
+      p {
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  

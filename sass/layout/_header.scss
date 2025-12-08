@@ -1,0 +1,198 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+@use "../abstracts" as *;
+
+.page {
+  position: relative;
+  background-color: white;
+
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    padding: 10px 20px;
+
+    &__logo {
+      width: 192px;
+      height: 75px;
+      object-fit: contain;
+
+      @include breakpoint(md) { width: 200px; }
+      @include breakpoint(lg) { width: 240px; }
+      @include breakpoint(xl) { width: 260px; }
+      @include breakpoint(xxl) { width: 300px; }
+    }
+
+    /* ---------------------------- NAV ---------------------------- */
+
+    .principal-nav {
+      position: relative;
+      z-index: 1001;
+
+      /* ---------------- MOBILE ---------------- */
+
+      .hamburger {
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: -15px;
+        right: 25px;
+        padding: 5px;
+
+        &__icon {
+          width: 23px;
+          height: 23px;
+          transition: transform 0.3s ease;
+          &:hover { transform: scale(1.1); }
+        }
+      }
+
+      .nav {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        width: 415px;
+        font-family: inherit;
+        position: absolute;
+        top: 27px;
+        right: 0;
+        box-shadow: 0 8px 24px rgba(0,0,0,.12);
+        max-height: 90vh;
+        overflow: auto;
+
+        &__list,
+        &__submenu {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+        }
+
+        &__item {
+          border-bottom: 1px solid #eaeaea;
+          padding: 25px;
+
+          &:first-child {
+            
+            padding: 5px 0 5px 25px;
+          }
+
+          a,
+          .nav__toggle {
+            width: 100%;
+            padding: 20px;
+            text-decoration: none;
+            color: #000;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 14px;
+            cursor: pointer;
+            
+
+            &:hover {
+              background-color: #f8f8f8;
+            }
+          }
+        }
+
+        &__submenu {
+          
+          display: none;
+          flex-direction: column;
+          white-space: nowrap;
+          background-color: #f1f5f9;
+
+          li a {
+            line-height: 4.8rem;
+            
+          }
+        }
+      }
+
+      &.is-open .nav { display: flex; }
+      .nav__item--open > .nav__submenu { display: flex; }
+
+      /* ---------------- DESKTOP ---------------- */
+
+      @include breakpoint(md) {
+        .hamburger {
+          display: none;
+        }
+
+        .nav {
+          display: flex !important;
+          position: static;
+          flex-direction: row;
+          align-items: center;
+          background: none;
+          box-shadow: none;
+          width: auto;
+          overflow: visible;
+          padding: 0;
+          flex-wrap: nowrap;
+        }
+
+        .nav__list {
+          display: flex;
+          flex-direction: row;
+          gap: 25px;
+          align-items: center;
+        }
+
+        .nav__item {
+          position: relative;
+          border: none;
+
+          a,
+          .nav__toggle {
+            padding: 10px 0;
+            background: none;
+            font-size: 15px;
+            color: #000;
+
+            &:hover {
+              background: none;
+            }
+          }
+        }
+
+        /* Submenú en escritorio */
+        .nav__submenu {
+          position: absolute;
+          top: 100%;      /* justo debajo del item */
+          left: 0;
+          background-color: white;
+          padding: 10px 0;
+          min-width: 340px;
+          box-shadow: 0 8px 24px rgba(0,0,0,.12);
+          border-radius: 6px;
+          display: none !important;
+          
+
+          li a {
+            padding: 10px 20px !important;
+            font-size: 14px;
+
+            &:hover {
+              background: #f5f5f5;
+            }
+          }
+        }
+
+        /* Mostrar submenú con hover */
+        .nav__item--has-submenu:hover > .nav__submenu {
+          display: block !important;
+        }
+      }
+    }
+  }
+}

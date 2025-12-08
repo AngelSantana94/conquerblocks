@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+// 1. Vendors
+@use 'vendors/normalize';
+
+// 2. Abstract (mixins, variables, funciones)
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+@use 'abstracts/functions';
+
+// 3. Base stuff
+@use 'base/base';
+@use 'base/fonts';
+@use 'base/helpers';
+@use 'base/typography';
+
+// 4. Layout-related sections
+@use 'layout/main';
+@use 'layout/footer';
+@use 'layout/header';
+
+// 5. Components
+// 5.1 Components Index
+@use 'components/index/hero-index';
+@use 'components/index/about-index';
+@use 'components/index/cta';
+@use 'components/index/skills';
+@use 'components/index/consultoria';
+
+// 5.2-1 Components Cursos
+@use 'components/cursos/benefits';
+@use 'components/cursos/methodology';
+@use 'components/cursos/numbers';
+@use 'components/cursos/teaching-system';
+@use 'components/cursos/footer-cta';
+@use 'components/cursos/master-wfs';
+@use 'components/cursos/hero-db';
+@use 'components/cursos/hero-dia';
+@use 'components/cursos/hero-cs';
+
+// 5.1 Components Legal
+@use 'components/legal/legal';
+
+// 5.1 Components Blog
+@use 'components/blog/dfsppj';
+
+// 5.3 Other Components
+@use 'components/button';
+@use 'components/courses';
+@use 'components/news';
+@use 'components/register';
+@use 'components/login';
+@use 'components/contact';
+
+
+// 5.4 Components About
+@use 'components/about/team-about';
+
+// 6. Pages
+@use 'pages/home';
+
+// 7. Themes
+@use 'themes/default';

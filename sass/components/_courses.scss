@@ -1,0 +1,113 @@
+@use "../abstracts/" as *;
+
+.courses {
+  margin-bottom: 75px;
+  background-color: white;
+
+  @media (min-width: 768px) {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  &__title {
+    color: black;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 50px;
+  }
+
+  &__description {
+    margin: 0 10px 25px 10px;
+    font-size: 16px;
+  }
+
+  &__green-bar {
+    max-width: 56px;
+    margin-bottom: 25px;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; // centra las cards en la fila
+  }
+
+  .course-card {
+    background-color: white;
+    box-shadow:
+      0 6px 5px rgba(0, 0, 0, 0.10),
+      0 12px 12px rgba(0, 0, 0, 0.10);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 260px; // base de 260px, se adapta
+    max-width: 350px; // límite máximo para que no se estire demasiado
+    margin-bottom: 40px;
+
+    &__image {
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    &__content {
+      padding: 0 10px;
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    &__description {
+      font-size: 16px;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    &__feature {
+      font-size: 16px;
+      text-align: left;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    &__icon {
+      width: 15px;
+      flex-shrink: 0;
+    }
+
+    &__whrite {
+      flex: 1;
+    }
+
+    &__link {
+      display: block;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      font-size: 1rem;
+      font-weight: bolder;
+      padding: 0.75rem 0;
+      border-radius: 1px;
+      text-align: center;
+
+      @media (min-width: 768px) {
+        width: 100%;
+        padding: 0.75rem 1.5rem;
+        margin: 0 auto;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
